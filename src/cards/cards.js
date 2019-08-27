@@ -1,7 +1,8 @@
 import React from 'react'
 import styles from './styles';
+import {withStyles} from '@material-ui/core'
 
-class CardComponent extends React.Component{
+class CardsComponent extends React.Component{
 
     render(){
         return(
@@ -9,3 +10,5 @@ class CardComponent extends React.Component{
         );
     }
 }
+
+export default withStyles(styles)(CardsComponent);

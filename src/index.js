@@ -1,9 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
 import LoginComponent from './login/login';
+import SignupComponent from './signup/signup';
+import CardsComponent from './cards/cards';
+import {Route, BrowserRouter as Router} from 'react-router-dom'; 
+
 
 const firebase = require("firebase");
 require("firebase/firestore");
@@ -24,12 +27,7 @@ const routing = (
             <div id = "routing-container" >
                 <Route path = '/login' component = { LoginComponent } ></Route> 
                 <Route path = '/signup' component = { SignupComponent } ></Route> 
-                <Route path = '/dashboard' component = { DashboardComponent } ></Route> 
-                <Route path = '/announcement' component = { AnnouncementComponent } ></Route> 
-                <Route path = '/viewannouncementdetails' component = { ViewAnnouncementDetailsComponent } ></Route> 
-                <Route path='/howtoapply' component={HowToApplyComponent}></Route>
-                <Route path='/createtender' component={CreateTenderComponent}></Route>
-                <Route path='/application' component={ApplicationComponent}></Route>
+                <Route path = '/cards' component = { CardsComponent } ></Route>
             </div>  
         </Router>
     );
